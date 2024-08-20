@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu Page</title>
+        <style>
+        @media screen and (max-width: 786px) {
+        /* General styles for the entire page */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://th.bing.com/th/id/OIP.nr4QlLxHKwBONaNaLZ8uMwHaEJ?rs=1&pid=ImgDetMain') no-repeat center center fixed; /* Replace with your image path */
+            background-size: cover;
+            color: white; /* Default text color */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Styles for the menu */
+        .menu-options {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 100%;
+            height: 100%; /* Cover the full screen */
+            z-index: 999;
+            flex-direction: column;
+        }
+
+        /* Styling the close button */
+        .close-button {
+         display: none;
+        }
+
+        /* Styling the menu list */
+        .menu-list {
+            list-style: none;
+            padding: 120px;
+            margin: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0); 
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+
+        .menu-list li {
+            padding: 15px 0;
+        }
+     
+        .menu-list li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 24px;
+           
+            
+        }
+
+        .menu-list li a:hover {
+            color: rgb(255, 0, 0);
+        }
+
+      
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="menu-options">
+            <div class="close-button" id="close-button">&#10005;</div> <!-- Cross icon -->
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.getElementById('close-button').addEventListener('click', function() {
+            window.location.href = 'index.html'; // Redirect to home page
+        });
+    </script>
+</body>
+</html>
